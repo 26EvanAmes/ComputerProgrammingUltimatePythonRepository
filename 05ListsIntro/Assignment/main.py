@@ -71,15 +71,27 @@ print("[4, 5, 6] =>", increasing([4, 5, 6]))
 def all_true(items):
     if items[0] == True and items[0] == items[1] == items[2]:
         return True
-    if items[1] == True and items[0] == items[1] == items[2]:
-        return True
-    if items[2] == True and items[0] == items[1] == items[2]:
-        return True
     else:
         return False
-print("demonstrate all_true:")
+print("Demonstrate all_true:")
 print("[True, False, True] =>", all_true([True, False, True]))
 print("[False, False, False] =>", all_true([False, False, False]))
 print("[True, True, True] =>", all_true([True, True, True]))
 print("[False, True, False] =>", all_true([False, True, False]))
 print("[True, False, False] =>", all_true([True, False, False]))
+
+def mostly_true(items):
+    if items[0] == True == items[1]:
+        return True
+    if items[0] == True == items[2]:
+        return True
+    if items[1] == True == items[2]:
+        return True
+    else:
+        return False
+print("Demonstrate mostly_true:")
+print("[True, False, True] =>", mostly_true([True, False, True]))
+print("[False, False, False] =>", mostly_true([False, False, False]))
+print("[True, True, True] =>", mostly_true([True, True, True]))
+print("[False, True, False] =>", mostly_true([False, True, False]))
+print("[True, False, False] =>", mostly_true([True, False, False]))
