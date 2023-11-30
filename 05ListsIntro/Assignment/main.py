@@ -33,7 +33,7 @@ print("[-1, 0, 1, 2, -1] & [2, 3, 4, 5] =>", common_edge([-1, 0, 1, 2, -1],[2, 3
 print("[3, 3, 3] & [3, 3, 3] =>", common_edge([3, 3, 3],[3, 3, 3]))
 
 def all_the_same(items):
-    if items[0] == items[1] and items[1] == items[2] and items[0] == items[2]:
+    if items[0] == items[1] and items[1] == items[2]:
         return True
     else:
         return False
@@ -57,7 +57,7 @@ print("[3, 3, 3] =>", all_unique([3, 3, 3]))
 print("[4, 5, 6] =>", all_unique([4, 5, 6]))
 
 def increasing(items):
-    if items[0] == items[1]+1 and items[1] == items[2]+1:
+    if items[0] < items[1] and items[1] < items[2]:
         return True
     else:
         return False
@@ -95,3 +95,45 @@ print("[False, False, False] =>", mostly_true([False, False, False]))
 print("[True, True, True] =>", mostly_true([True, True, True]))
 print("[False, True, False] =>", mostly_true([False, True, False]))
 print("[True, False, False] =>", mostly_true([True, False, False]))
+
+def make_copy(items):
+    num1 = items[0]
+    num2 = items[1]
+    num3 = items[2]
+    return [num1, num2, num3]
+print("Demonstrate make_copy:")
+print("[5, 6, 1] =>", make_copy([5, 6, 1]))
+
+def repeat_thrice(item):
+    num1 = item
+    return [num1, num1, num1]
+print("Demonstrate repeat_thrice:")
+print("-1 =>", repeat_thrice(-1))
+print("5 =>", repeat_thrice(5))
+
+def make_reversed_copy(items):
+    num1 = items[-1]
+    num2 = items[1]
+    num3 = items[0]
+    return [num1, num2, num3]
+print("Demonstrate make_reversed_copy:")
+print("[1, 2, 3] =>",make_reversed_copy([1, 2, 3]))
+print("[13, 5, 6] =>",make_reversed_copy([13, 5, 6]))
+
+def reverse_in_place(items):
+    num1 = items[-1]
+    num2 = items[1]
+    num3 = items[0]
+    items[-1] = num3
+    items[1] = num2
+    items[0] = num1
+    return items
+print("Demonstrate reverse_in_place:")
+print("[1, 2, 3] =>",reverse_in_place([1, 2, 3]))
+print("[13, 5, 6] =>",reverse_in_place([13, 5, 6]))
+
+def count_failing_grades(scores):
+    failing = 0
+    for score in scores:
+        if score < 60:
+            failing = failing + 1
