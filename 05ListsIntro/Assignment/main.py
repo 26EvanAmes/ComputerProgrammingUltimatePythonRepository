@@ -131,9 +131,3 @@ def reverse_in_place(items):
 print("Demonstrate reverse_in_place:")
 print("[1, 2, 3] =>",reverse_in_place([1, 2, 3]))
 print("[13, 5, 6] =>",reverse_in_place([13, 5, 6]))
-
-def count_failing_grades(scores):
-    failing = 0
-    for score in scores:
-        if score < 60:
-            failing = failing + 1
