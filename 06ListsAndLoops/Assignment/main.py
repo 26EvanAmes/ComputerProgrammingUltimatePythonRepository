@@ -38,3 +38,59 @@ def average_act_score(scores):
 inputlist = [0, 5, 10, 15, 20, 25, 30, 35, 40]
 result = average_act_score(inputlist)
 print("Average ACT Scores => ", result)
+
+def all_true(booleans):
+    falses = 0
+    for boolean in booleans:
+        if boolean == False:
+            falses = falses+1
+    if falses > 0:
+        return False
+    else:
+        return True
+inputlist = [True, True, True, True]
+result = all_true(inputlist)
+print("All True? => ", result)
+
+def any_true(booleans):
+    trues = 0
+    for boolean in booleans:
+        if boolean == True:
+            trues = trues + 1
+    if trues > 0:
+        return True
+    else:
+        return False
+inputlist = [False, False, False, True]
+result = any_true(inputlist)
+print("Any True? => ", result)
+
+def mostly_true(booleans):
+    trues = 0
+    falses = 0
+    for boolean in booleans:
+        if boolean == True:
+            trues = trues + 1
+        else:
+            falses = falses + 1
+    if trues > falses:
+        return True
+    else:
+        return False
+inputlist = [False, False, False, True, True]
+result = mostly_true(inputlist)
+print("Mostly True? => ", result)
+
+def has_vowel(chars):
+    vowels = 0
+    for char in chars:
+        if char in ["a", "e", "i", "o", "u"]:
+            vowels = vowels + 1
+    if vowels > 0:
+        return True
+    else: 
+        return False
+inputlist = ["x", "b", "c", "d", "x", "f"]
+result = has_vowel(inputlist)
+print("Has a Vowel? => ", result)
+        
