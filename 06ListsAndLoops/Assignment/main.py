@@ -34,7 +34,10 @@ def average_act_score(scores):
         if score >= 1 and score <= 36:
             average = average + score
             divisor = divisor + 1
-    return average / divisor
+    if divisor == 0:
+        return None
+    else:
+        return average / divisor
 inputlist = [0, 5, 10, 15, 20, 25, 30, 35, 40]
 result = average_act_score(inputlist)
 print("Average ACT Scores => ", result)
