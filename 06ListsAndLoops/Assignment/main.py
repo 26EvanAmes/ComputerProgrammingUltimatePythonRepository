@@ -96,4 +96,72 @@ def has_vowel(chars):
 inputlist = ["x", "b", "c", "d", "x", "f"]
 result = has_vowel(inputlist)
 print("Has a Vowel? => ", result)
-        
+
+def all_the_same(nums):
+    same = True
+    first = nums[0]
+    for num in nums:
+        if num == first:
+            pass
+        else:
+            same = False
+    return same
+inputlist = ["2", "1", "1", "1", "1"]
+result = all_the_same(inputlist)
+print("All the Same? => ", result)
+
+def increasing(nums):
+    previous = -99999
+    increasing = True
+    for num in nums:
+        if num > previous:
+            previous = num
+        else:
+            increasing = False
+    return increasing
+inputlist = [2, 3, 5, 9, 2]
+result = increasing(inputlist)
+print("Increasing? => ", result)
+
+def is_incrementing(nums):
+    incrementing = True
+    previous = nums[0] - 1
+    for num in nums:
+        if num == previous + 1:
+            previous = num
+        else:
+            incrementing = False
+    return incrementing
+inputlist = [2, 3, 4, 5, 6]
+result = is_incrementing(inputlist)
+print("Incrementing? => ", result)
+
+def has_adjacent_repeat(nums):
+    previous = 0.32771
+    adjacent_repeat = False
+    for num in nums:
+        if num == previous:
+            adjacent_repeat = True
+        else:
+            previous = num
+    return adjacent_repeat
+inputlist = ["4", "3", "4", "3", "4"]
+result = has_adjacent_repeat(inputlist)
+print("Has Adjacent Repeat? => ", result)
+
+def sum_with_skips(nums):
+    ignoring = False
+    sum = 0
+    for num in nums:
+        if ignoring == False and num == -1:
+            ignoring = True
+        elif ignoring == True and num == -1:
+            ignoring = False
+        elif ignoring == True:
+            pass
+        else:
+            sum = sum + num
+    return sum
+inputlist = [4, -1, 4, -1, 4]
+result = sum_with_skips(inputlist)
+print("Sum With Skips => ", result)
