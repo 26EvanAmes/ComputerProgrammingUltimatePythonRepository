@@ -40,3 +40,53 @@ def in_alphabetical_order(word):
     return alphabetical
 print(in_alphabetical_order("abcder"))
 
+def alternate_case(word):
+    casechange = True
+    result = ""
+    for letters in word:
+        if casechange == False:
+            casechange = True
+            result = result + letters
+        elif casechange == True:
+            letters = letters.upper()
+            result = result + letters
+            casechange = False
+    return result
+print(alternate_case("python"))
+
+def remove_vowels(word):
+    result = ""
+    for letters in  word:
+        if letters in "aeiou":
+            pass
+        else:
+            result = result + letters
+    return result
+print(remove_vowels("python"))
+
+def to_camel_case(phrase):
+    uppercase = False
+    result = ""
+    for chars in phrase:
+        if uppercase == True:
+            chars = chars.upper()
+            result = result + chars
+            uppercase = False
+        else:
+            if chars in " ":
+                uppercase = True
+            else:
+                result = result + chars
+    return result
+print(to_camel_case("a very useful pot"))
+
+def to_snake_case(phrase):
+    result = ""
+    for chars in phrase:
+        if chars in " ":
+            chars = "_"
+            result = result + chars
+        else:
+            result = result + chars
+    return result
+print(to_snake_case("a very useful pot"))
