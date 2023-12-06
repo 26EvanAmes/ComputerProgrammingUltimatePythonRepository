@@ -90,3 +90,23 @@ def to_snake_case(phrase):
             result = result + chars
     return result
 print(to_snake_case("a very useful pot"))
+
+def without_duplicates(numbers):
+    same = ""
+    result = []
+    for number in numbers:
+        if number == same:
+            pass
+        else:
+            result.append(number)
+            same = number
+    return result
+print(without_duplicates([1,1,1,2,3,4,5,5,5,6,6,7,8,7,6,8,8,9]))
+
+def filter_valid_act_scores(scores):
+    result = []
+    for score in scores:
+        if score >= 1 and score <= 36:
+            result.append(score)
+    return result
+print(filter_valid_act_scores([1,0,36,37]))
