@@ -85,7 +85,7 @@ for row in reader:
     name, gradelevel, percent = row
     gradelevel = int(gradelevel)
     percent = int(percent)
-    if gradelevel == 12 and percent <= 60:
+    if gradelevel == 12 and percent < 60:
         print(name)
 
 
