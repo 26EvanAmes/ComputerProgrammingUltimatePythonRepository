@@ -57,4 +57,3 @@ for city in cities:
             shrink = rate
             shrinkcity = city["city"]
 print("Growing the most =>", growcity, "Shrinking the most =>", shrinkcity)
-
